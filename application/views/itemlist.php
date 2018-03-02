@@ -3,7 +3,10 @@
     <tr>
             <th>Id</th>
             <th>Task</th>
-            <th>Status</th>
+            <th>Priority</th>
+            <th>Size</th>
+            <th>group</th>
+            <th>status</th>
     </tr>
 
     {display_tasks}

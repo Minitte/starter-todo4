@@ -37,6 +37,10 @@ class Views extends Application
         }
 
         $parms = ['display_tasks' => $converted];
+
+        // INSERT the next two lines
+        $role = $this->session->userdata('userrole');
+        $parms['completer'] = ($role == ROLE_OWNER) ? '/views/complete' : '#';
         return $this->parser->parse('by_priority', $parms, true);
     }
 

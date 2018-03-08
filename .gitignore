@@ -22,3 +22,4 @@ tmp/
 
 vendor/
 composer.lock
+*.code-workspace

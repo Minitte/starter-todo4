@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Collection class for baboons.
+ */
 class Zoo extends Memory_Model {
     
     // over-ride base collection adding, with a limit
@@ -7,5 +10,7 @@ class Zoo extends Memory_Model {
         if ($this->size() >= 6) {
             throw new Exception('The zoo is full');
         }
+        parent::add($record);
+        return $this;
     }
 }

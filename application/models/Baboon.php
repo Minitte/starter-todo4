@@ -11,6 +11,11 @@ class Baboon extends Entity {
         if (empty($value)) {
             throw new InvalidArgumentException('An Id must have a value');
         }
+        
+        if (!is_numeric($value)) {
+            throw new Exception('Value must be a numeric');
+        }
+        
         $this->id = $value;
         return $this;
     }
@@ -49,6 +54,10 @@ class Baboon extends Entity {
     public function setWeight($value) {
         if (!is_numeric($value)) {
             throw new Exception('Weight must be numeric');
+        }
+
+        if ($value < 5) {
+            throw new Exception('A baboon cannot weigh more than 60kg');
         }
 
         if ($value > 60) {

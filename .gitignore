@@ -23,3 +23,4 @@ tmp/
 vendor/
 composer.lock
 *.code-workspace
+tests/build/

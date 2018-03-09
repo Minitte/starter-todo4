@@ -25,12 +25,14 @@ class BaboonTest extends TestCase {
      */
     function testIDEmpty() {
         // empty test
+        $this->expectException('Exception');
         $this->monkeyS->setId('');
         $this->assertEquals(1, $this->monkeyS->id);
     }
 
     function testIDNonNumber() {
         // non number test
+        $this->expectException('Exception');
         $this->monkeyS->setId('ozma');
         $this->assertEquals(1, $this->monkeyS->id);
     }
@@ -46,12 +48,14 @@ class BaboonTest extends TestCase {
      */
     function testNameEmpty() {
         // empty test
+        $this->expectException('Exception');
         $this->monkeyS->setName('');
         $this->assertEquals('Mike Jam', $this->monkeyS->name);
     }
 
     function testNameGreaterThan30Length() {
         // 30+ chars test
+        $this->expectException('Exception');
         $this->monkeyS->setName('kjlgakjlhgagfhjgfhjgahgfgfhgfhjgfhjewttjreioyhvbvnzxmn,ny;iupooiutyewytrfgc');
         $this->assertEquals('Mike Jam', $this->monkeyS->name);
     }
@@ -67,18 +71,21 @@ class BaboonTest extends TestCase {
      */
     function testSpeciesEmpty() {
         // empty test
+        $this->expectException('Exception');
         $this->monkeyS->setSpecies('');
         $this->assertEquals('Yellow', $this->monkeyS->species);
     }
 
     function testSpeciesNumber() {
         // non char test
+        $this->expectException('Exception');
         $this->monkeyS->setSpecies(10);
         $this->assertEquals('Yellow', $this->monkeyS->species);
     }
     
     function testSpeciesWrongSpecies() {
         // non species test
+        $this->expectException('Exception');
         $this->monkeyS->setSpecies('pSurface');
         $this->assertEquals('Yellow', $this->monkeyS->species);
     }
@@ -114,24 +121,28 @@ class BaboonTest extends TestCase {
      */
     function testWeightEmpty() {
         // empty test
+        $this->expectException('Exception');
         $this->monkeyS->setWeight('');
         $this->assertEquals(22, $this->monkeyS->weight);
     }
 
     function testWeightChar() {
         // char test
+        $this->expectException('Exception');
         $this->monkeyS->setWeight('Red Mushroom');
         $this->assertEquals(22, $this->monkeyS->weight);
     }
 
     function testWeightGreaterThan60() {
         // larger than 60 test
+        $this->expectException('Exception');
         $this->monkeyS->setWeight(125);
         $this->assertEquals(22, $this->monkeyS->weight);
     }
 
     function testWeightNegative() {
         // negative test
+        $this->expectException('Exception');
         $this->monkeyS->setWeight(-34);
         $this->assertEquals(22, $this->monkeyS->weight);
     }

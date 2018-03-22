@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks>
+
+    <task>
+        <id>2</id>
+        <taskName>mow the lawn</taskName>
+        <priority>2</priority>
+        <size>2</size>
+        <group>1</group>
+        <deadline></deadline>
+        <status>2</status>
+        <flag></flag>
+    </task>
+
+    <task>
+        <id>3</id>
+        <taskName>wAsh the car</taskName>
+        <priority>2</priority>
+        <size>2</size>
+        <group>1</group>
+        <deadline></deadline>
+        <status></status>
+        <flag></flag>
+    </task>
+
+    <task>
+        <id>4</id>
+        <taskName>paint the fence</taskName>
+        <priority>1</priority>
+        <size>2</size>
+        <group>1</group>
+        <deadline></deadline>
+        <status></status>
+        <flag></flag>
+    </task>
+
+    <task>
+        <id>6</id>
+        <taskName>Intramural hockey game</taskName>
+        <priority>1</priority>
+        <size>2</size>
+        <group>4</group>
+        <deadline></deadline>
+        <status></status>
+        <flag></flag>
+    </task>
+
+    <task>
+        <id>7</id>
+        <taskName>Canucks hockey game</taskName>
+        <priority>3</priority>
+        <size>3</size>
+        <group>4</group>
+        <deadline>20170304</deadline>
+        <status></status>
+        <flag></flag>
+    </task>
+
+    <task>
+        <id>8</id>
+        <taskName>Buy steel-toe boots</taskName>
+        <priority>1</priority>
+        <size>3</size>
+        <group>3</group>
+        <deadline></deadline>
+        <status>1</status>
+        <flag></flag>
+    </task>
+
+</tasks>

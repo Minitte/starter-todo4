@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tasks>
 
-    <task>
-        <id>2</id>
+    <task id="2">
         <taskName>mow the lawn</taskName>
         <priority>2</priority>
         <size>2</size>
@@ -12,8 +11,7 @@
         <flag></flag>
     </task>
 
-    <task>
-        <id>3</id>
+    <task id="3">
         <taskName>wAsh the car</taskName>
         <priority>2</priority>
         <size>2</size>
@@ -23,8 +21,7 @@
         <flag></flag>
     </task>
 
-    <task>
-        <id>4</id>
+    <task id="4">
         <taskName>paint the fence</taskName>
         <priority>1</priority>
         <size>2</size>
@@ -34,8 +31,7 @@
         <flag></flag>
     </task>
 
-    <task>
-        <id>6</id>
+    <task id="6">
         <taskName>Intramural hockey game</taskName>
         <priority>1</priority>
         <size>2</size>
@@ -45,8 +41,7 @@
         <flag></flag>
     </task>
 
-    <task>
-        <id>7</id>
+    <task id="7">
         <taskName>Canucks hockey game</taskName>
         <priority>3</priority>
         <size>3</size>
@@ -56,8 +51,7 @@
         <flag></flag>
     </task>
 
-    <task>
-        <id>8</id>
+    <task id="8">
         <taskName>Buy steel-toe boots</taskName>
         <priority>1</priority>
         <size>3</size>

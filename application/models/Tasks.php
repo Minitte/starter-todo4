@@ -9,6 +9,44 @@ class Tasks extends XML_Model {
         $this->CI = &get_instance(); // retrieve the CI instance
     }
 
+    protected function store()
+    {
+
+        if (($handle = fopen($this->_origin, "w")) === FALSE)
+		{
+            return;
+        }
+
+        $xmlDoc = new DOMDocument( "1.0");
+        $xmlDoc->preserveWhiteSpace = false;
+        $xmlDoc->formatOutput = true;
+        $tasks = new SimpleXMLElement("<tasks></tasks>");
+
+        foreach($this->_data as $key => $value)
+        {
+            $taskElement = $tasks->addChild('task');
+            $taskElement->addAttribute('id', $value->id);
+
+            $elementIndex = 0;
+            foreach ($value as $itemkey => $record ) 
+            {
+                $elementIndex++;
+                if ($elementIndex == 1) {
+                    continue;
+                }
+
+                if ($elementIndex == 2) {
+                    $taskElement->addChild('taskName', $record);    
+                } else {
+                    $taskElement->addChild($itemkey, $record);
+                }
+            }
+        }
+    
+        $xmlDoc->loadXML($tasks->asXML());
+        $xmlDoc->save($this->_origin);
+    }
+
     protected function load(){
         if (file_exists(realpath($this->_origin))) {
 

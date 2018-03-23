@@ -6,6 +6,7 @@ class Tasks extends XML_Model {
 
     public function __construct() {
         parent::__construct(APPPATH . '../data/task.xml');
+        $this->CI = &get_instance(); // retrieve the CI instance
     }
 
     protected function load(){
@@ -93,7 +94,7 @@ class Tasks extends XML_Model {
 
         // substitute the category name, for sorting
         foreach ($undone as $task) {
-            $task->group = $this->app->group($task->group);
+            $task->group = $this->CI->app->group($task->group); // use CI to get at the app model
         }
         
 
